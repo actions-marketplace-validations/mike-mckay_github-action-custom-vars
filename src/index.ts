@@ -15,11 +15,7 @@ enum envVariables {
  */
 export const parseRecentMergedBranchNameFromCommitComment = () => {
   const getFirstCommitComment = 'git log -1 --pretty=%B'
-  const gitBranch = childProcess.execSync(getFirstCommitComment).toString().trim()
-  const pattern = /\/(\S+)/g
-  if (pattern.test(gitBranch)) {
-    return RegExp.$1
-  }
+  return childProcess.execSync(getFirstCommitComment).toString().trim()
 }
 
 async function run() {
