@@ -1,5 +1,5 @@
 name: "Plain github action custom vars"
-description: "Export git information via custom vars in some special case where github action workflow does not proved"
+description: "Export git information via custom vars in some special case where github action workflow does not provide"
 branding:
   icon: "git-branch"
   color: "orange"
